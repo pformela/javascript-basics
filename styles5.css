@@ -1,0 +1,26 @@
+.title {
+    width: 100px;
+    height: 100px;
+    color: red;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+.show {
+    animation: fade-in 2s forwards;
+}
+.hide {
+    animation: fade-out 2s forwards;
+}
+@keyframes fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}

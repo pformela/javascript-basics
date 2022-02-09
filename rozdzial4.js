@@ -55,3 +55,66 @@ window.addEventListener("load", () => {
     console.log("Wczytano wszystkie elementy strony");
 });
 
+
+const form = document.getElementById("form");
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    if(isFormValid()) {
+        // wysłanie formularza
+    } else {
+        alert('Formularz zawiera błędy!');
+    }
+});
+
+const link = document.getElementById('link');
+link.addEventListener('click', e => {
+    console.log('Kliknięto w link');
+});
+
+// mouse
+const container = document.getElementById('container2');
+const mouseEnterCounter = document.getElementById('mouseenter');
+const mouseOverCounter = document.getElementById('mouseover');
+const mouseLeaveCounter = document.getElementById('mouseleave');
+const mouseOutCounter = document.getElementById('mouseout');
+
+container.addEventListener('mouseenter', e => {
+    const actual = Number(mouseEnterCounter.textContent);
+    mouseEnterCounter.textContent = actual + 1;
+});
+
+container.addEventListener('mouseover', e => {
+    const actual = Number(mouseOverCounter.textContent);
+    mouseOverCounter.textContent = actual + 1;
+});
+
+container.addEventListener('mouseleave', e => {
+    const actual = Number(mouseLeaveCounter.textContent);
+    mouseLeaveCounter.textContent = actual + 1;
+});
+
+container.addEventListener('mouseout', e => {
+    const actual = Number(mouseOutCounter.textContent);
+    mouseOutCounter.textContent = actual + 1;
+});
+
+
+// dynamiczne tworzenie obrazków
+const body = document.body;
+
+function addImage(imageSrc) {
+    const img = new Image();
+    img.src = imageSrc;
+
+    img.addEventListener('load', e => {
+        body.appendChild(img);
+    });
+
+    img.addEventListener('error', e => {
+       const errorMessage = document.createElement('p');
+       errorMessage.textContent = 'Błąd wczytywania obrazka';
+       body.appendChild(errorMessage);
+    });
+}
+addImage('https://Xsource.unsplash.com/random/1');
+addImage('https://source.unsplash.com/random/1');

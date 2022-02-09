@@ -4,3 +4,16 @@
     margin-top: 20px;
     background-color: red;
 }
+
+#container2 {
+    padding: 20px;
+    background-color: #696969;
+    width: 100px;
+    overflow: hidden;
+}
+#container2>div {
+    margin: 20px;
+    height: 50px;
+    width: 50px;
+    background-color: #C0C0C0;
+}

@@ -21,6 +21,32 @@
     </ul>
     <h2>Aktualny element: <span id="selected"></span></h2>
 
+    <form id="form">
+        <input id="name"/>
+        <input id="city"/>
+        <input id="country"/>
+        <button type="submit" id="submit-button">
+            Wyślij formularz
+        </button>
+    </form>
+
+    <a href="https://helion.pl" id="link">Link</a>
+
+    <p>MouseEnter: <span id="mouseenter">0</span></p>
+    <p>MouseOver: <span id="mouseover">0</span></p>
+    <hr/>
+    <p>MouseLeave: <span id="mouseleave">0</span></p>
+    <p>MouseOut: <span id="mouseout">0</span></p>
+    <hr/>
+    <div id="container2">
+        <div></div>
+        <div></div>
+    </div>
+
+    <script>
+        window.addEventListener('keydown', e => console.log(e.key));
+    </script>
+
     <img src="https://source.unsplash.com/random/1" loading="lazy"/>
     <img src="https://source.unsplash.com/random/2" loading="lazy"/>
     <img src="https://source.unsplash.com/random/3" loading="lazy"/>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<HTML lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Key events</title>
+    <script src="rozdzial4_2.js" defer></script>
+</head>
+<body>
+
+<button id="btn">Przejdź do pola "name"</button>
+<label for="name">Podaj imię:</label>
+<input type="text" id="name" />
+
+<button id="add">Dodaj nowy element</button>
+<ul id="list">
+    <li>
+        Element 1 <button data-delete>Usuń</button>
+    </li>
+</ul>
+
+<section id="section">
+    <button id="btn2">Kliknij</button>
+</section>
+<div>
+    <h2>Nagłówek</h2>
+</div>
+<ul>
+    <li>element listy</li>
+</ul>
+
+<ul id="list2">
+    <li>
+        <button id="button-1">Przycisk 1</button>
+    </li>
+    <li>
+        <button id="button-2">Przycisk 2</button>
+    </li>
+</ul>
+
+
+<script>
+    window.addEventListener('offline', () => alert('Jesteś offline!'));
+    window.addEventListener('online', () => alert('Jesteś online!'));
+</script>
+</body>
+</HTML>
